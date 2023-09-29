@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.4'
+
+}
+repositories {
+    // Use the plugin portal to apply community plugins in convention plugins.
+    mavenCentral()
+}
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.1.1'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '3.1.4'
+}
+jar {
+    manifest {
+        attributes 'Main-Class' : 'org.example.Main'
+    }
+}
